@@ -1,0 +1,19 @@
+{
+  "name": "pmis-console",
+  "version": "1.0.0",
+  "description": "pmis-console",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Emanuele Disco",
+  "license": "ISC",
+  "dependencies": {
+    "connect": "latest",
+    "serve-static": "latest"
+  },
+  "devDependencies": {
+    "typings": "^1.4.0"
+  }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html ng-app="app">
+
+<head>
+	<title>SangAh - Job Application Form</title>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="resources/style.css?ver=1" type="text/css" />
+    <link rel="stylesheet" href="resources/navbar-fixed-top.css?ver=1" type="text/css" />
+    <link rel="stylesheet" href="libs/codemirror/lib/codemirror.css?ver=1" type="text/css" />
+	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="libs/bootstrap/bootstrap.css" />
+
+</head>
+
+<body ng-controller="AppController as ctrl" >
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">PMIS Console</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li ng-class="{'active': ctrl.menu == '1'}" ng-click="ctrl.menu = '1'"><a href="#!/console">Console</a></li>
+                <li ng-class="{'active': ctrl.menu == '2'}" ng-click="ctrl.menu = '2'"><a href="#!/">Sessions</a></li>
+                <li ng-class="{'active': ctrl.menu == '3'}" ng-click="ctrl.menu = '3'"><a href="#!/">Menu Import/Export</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+    
+<div class="container-fluid">
+    <div class="panel">
+        <div class="panel-body" >
+            <div ng-show="$root.error" class="alert alert-danger" role="alert">{{$root.error.message}}</div>
+            <div ng-view></div>
+        </div>
+    </div>
+</div>
+
+
+<script src="libs/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="resources/pmis_loader.js" ></script>
+<script>
+PmisJsLoader.loadModule( "Functionsml.js");
+</script>
+
+<!--codemirror-->
+<script src="libs/codemirror/lib/codemirror.js"></script>
+<script src="libs/codemirror/addon/edit/matchbrackets.js"></script>
+<script src="libs/codemirror/mode/python/python.js"></script>
+
+<!-- https://docs.angularjs.org/guide/ie -->
+<script src="libs/angular/angular.min.js"></script>
+<script src="libs/angular-route/angular-route.min.js"></script>
+
+<script type="text/javascript" src="commons/http-request.module.js"></script>
+<script type="text/javascript" src="console.module.js"></script>
+<script type="text/javascript" src="app.module.js"></script>
+
+</body>
+
+</html>
