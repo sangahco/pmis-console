@@ -3,13 +3,25 @@ How To Prepare/Run PMIS Console
 
 Before doing anything else make sure you have these applications:
 
-#. npm
+#. npm (https://nodejs.org/it/download/)
     This is used for running **bower** and downloading required libraries
-#. git
+
+#. git (https://git-scm.com/downloads)
     This is the SVN used for downloading and updating this repository
 
 
-Execute these commands from a console::
+1. Get this source
+---------------------
+
+::
+
+    $ git clone https://github.com/sangahco/pmis-console.git
+
+
+2. Fetch Dependencies
+-------------------------
+
+Go inside the new folder (pmis-console) and execute these commands from a console::
 
     $ npm install
     $ git submodule update
