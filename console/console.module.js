@@ -106,7 +106,7 @@
         $scope.$watch(function(){
             return $ctrl.code;
         }, function(nvalue){
-            editor.setValue(nvalue);
+            nvalue && editor.setValue(nvalue);
         });
     }
 

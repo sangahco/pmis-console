@@ -5,15 +5,18 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "postinstall": "bower-installer"
   },
   "author": "Emanuele Disco",
   "license": "ISC",
   "dependencies": {
-    "connect": "latest",
-    "serve-static": "latest"
   },
   "devDependencies": {
-    "typings": "^1.4.0"
+    "typings": "^1.4.0",
+    "bower": "latest",
+    "bower-installer": "latest",
+    "connect": "latest",
+    "serve-static": "latest"
   }
 }

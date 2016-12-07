@@ -8,7 +8,8 @@
   "dependencies": {
     "angular": "1.5.x",
     "angular-route": "1.5.x",
-    "bootstrap": "3.3.x"
+    "bootstrap": "3.3.x",
+    "codemirror": "latest"
   },
   "install": {
     "path": "libs",
@@ -16,7 +17,8 @@
       "angular": ["bower_components/angular/angular.min.js", "bower_components/angular/angular.min.js.map"],
       "angular-route": ["bower_components/angular-route/angular-route.min.js", "bower_components/angular-route/angular-route.min.js.map"],
       "jquery": ["bower_components/jquery/dist/jquery.min.js", "bower_components/jquery/dist/jquery.min.map"],
-      "bootstrap": ["bower_components/bootstrap/dist/css/bootstrap.css"]
+      "bootstrap": ["bower_components/bootstrap/dist/css/bootstrap.css"],
+      "codemirror": ["bower_components/codemirror/addon/edit/*", "bower_components/codemirror/lib/*", "bower_components/codemirror/mode/python/*"]
     }
   }
 }
