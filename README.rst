@@ -43,3 +43,17 @@ bower_components (*only development*)
 
 libs
     Contains the libraries required by the application (jquery,bootstrap,angular).
+
+
+3. Run & Testing
+------------------
+
+If you want to test the application without server functionalities (only client side functionalities)::
+
+    $ npm start
+
+You can test the GUI at **localhost:8080** but sending and receiving data will not work.
+
+.. important:: 
+  To have a fully functional application you need to put the entire folder under PMIS web folder
+  and after running the web application you can access the service going to ``/pmis-console`` .
