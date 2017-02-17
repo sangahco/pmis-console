@@ -25,6 +25,7 @@ Go inside the new folder (pmis-console) and execute these commands from a consol
 
     $ npm install
     $ git submodule update
+    $ node_modules/bower-installer/bower-installer.js
 
 ``npm install`` will install the necessary modules, ``bower`` and ``bower-installer``
 and will prepare the root folder with necessary dependencies.
