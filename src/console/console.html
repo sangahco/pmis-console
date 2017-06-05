@@ -8,7 +8,7 @@
                             <label>Load a Script</label>
                             <input ng-model="filter.$" type="text" class="form-control" >
                         </div>
-                        <div class="table-responsive" style="">
+                        <div class="table-responsive" >
                         <table class="table table-condensed table-hover script-list">
                             <tr ng-click="$ctrl.loadScript(script.file)" 
                             ng-repeat="script in $ctrl.scripts | orderBy:'title' | filter:filter">
