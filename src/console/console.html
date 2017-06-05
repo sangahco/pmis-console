@@ -1,5 +1,6 @@
 <div class="panel">
     <div class="panel-body">
+        {{$ctrl.code}}
         <form name="form" novalidate>
             <div class="row">
                 <div class="col-md-4">
@@ -8,8 +9,8 @@
                             <label>Load a Script</label>
                             <input ng-model="filter.$" type="text" class="form-control" >
                         </div>
-                        <div class="table-responsive" >
-                        <table class="table table-condensed table-hover script-list">
+                        <div class="table-responsive script-list" >
+                        <table class="table table-condensed table-hover">
                             <tr ng-click="$ctrl.loadScript(script.file)" 
                             ng-repeat="script in $ctrl.scripts | orderBy:'title' | filter:filter">
                                 <td ng-class="$ctrl.script == script.file ? 'selected' : ''" >{{script.title}}</td>

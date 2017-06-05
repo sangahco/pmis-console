@@ -2,5 +2,6 @@ body {
   padding-top: 20px;
   padding-bottom: 20px;
 }
+.script-list{max-height: 350px;}
 .script-list td{cursor: pointer;}
 .script-list td.selected{background-color: #d6fbb2;}

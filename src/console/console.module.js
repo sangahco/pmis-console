@@ -76,7 +76,7 @@
                 });
             }
 
-            !$ctrl.scripts && consoleService.loadScripts()
+            consoleService.loadScripts()
             .then(function(scripts){
                 $log.log(scripts);
                 $ctrl.scripts = scripts;
