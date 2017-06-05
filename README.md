@@ -1,4 +1,4 @@
-# Rainy Status Widget
+# PMIS Console (Jython Script Executor)
 
 Before doing anything else make sure you have these applications:
 
