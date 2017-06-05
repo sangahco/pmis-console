@@ -11,7 +11,7 @@
             when('/', {
                 template: '<console></console>'
             }).
-            when('/console', {
+            when('/console/:script', {
                 template: '<console></console>'
             }).
             otherwise('/');

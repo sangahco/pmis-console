@@ -9,10 +9,10 @@
                             <input ng-model="filter.$" type="text" class="form-control" >
                         </div>
                         <div class="table-responsive" style="">
-                        <table class="table table-condensed table-hover">
+                        <table class="table table-condensed table-hover script-list">
                             <tr ng-click="$ctrl.loadScript(script.file)" 
                             ng-repeat="script in $ctrl.scripts | orderBy:'title' | filter:filter">
-                                <td>{{script.title}}</td>
+                                <td ng-class="$ctrl.script == script.file ? 'selected' : ''" >{{script.title}}</td>
                             </tr>
                         </table>
                         </div>

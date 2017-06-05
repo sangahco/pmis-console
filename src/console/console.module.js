@@ -47,7 +47,7 @@
 
     .component('console', {
         templateUrl: 'console/console.html',
-        controller: ["$log", '$scope', 'consoleService', function($log, $scope, consoleService){
+        controller: ["$log", '$scope', '$routeParams', 'consoleService', function($log, $scope, $routeParams, consoleService){
             var $ctrl = this;
 
             // create the codemirror editor
@@ -70,16 +70,19 @@
             }
 
             $ctrl.loadScript = function(script){
-                consoleService.loadScript(script).then(function(script){
-                    $ctrl.code = script;
+                $ctrl.script = script;
+                consoleService.loadScript(script).then(function(data){
+                    $ctrl.code = data;
                 });
             }
 
-            consoleService.loadScripts()
+            !$ctrl.scripts && consoleService.loadScripts()
             .then(function(scripts){
                 $log.log(scripts);
                 $ctrl.scripts = scripts;
             });
+            
+            $ctrl.loadScript($routeParams.script);
             
         }]
     });
